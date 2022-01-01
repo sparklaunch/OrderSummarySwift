@@ -52,6 +52,29 @@ struct ContentView: View {
                             .padding(20)
                         }
                         .clipShape(RoundedRectangle(cornerRadius: 10))
+                        VStack(spacing: 10) {
+                            Button {
+
+                            } label: {
+                                Text("Proceed to Payment")
+                                    .foregroundColor(.white)
+                                    .font(.title3.weight(.semibold))
+                            }
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .padding()
+                            .background(Common.Colors.kButtonColor)
+                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                            .shadow(radius: 10)
+                            Button(role: .cancel) {
+
+                            } label: {
+                                Text("Cancel Order")
+                                    .foregroundColor(Common.Colors.kContentColor)
+                                    .font(.title3.weight(.semibold))
+                            }
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .padding()
+                        }
                     }
                     .padding(30)
                 }
