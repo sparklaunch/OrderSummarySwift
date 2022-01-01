@@ -18,10 +18,10 @@ struct ContentView: View {
                 ZStack {
                     Color.white
                     VStack(alignment: .center, spacing: 20) {
-                        Text("Order Summary")
+                        Text(Common.Texts.kTitle)
                             .foregroundColor(Common.Colors.kTitleColor)
                             .font(.title.weight(.heavy))
-                        Text("You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!")
+                        Text(Common.Texts.kDescription)
                             .foregroundColor(Common.Colors.kContentColor)
                             .font(.subheadline.weight(.medium))
                             .multilineTextAlignment(.center)
@@ -36,15 +36,15 @@ struct ContentView: View {
                                         .frame(width: 48, height: 48)
                                 }
                                 VStack(spacing: 10) {
-                                    Text("Annual Plan")
+                                    Text(Common.Texts.kPlanText)
                                         .foregroundColor(Common.Colors.kTitleColor)
                                         .font(.subheadline.weight(.heavy))
-                                    Text("$59.99/year")
+                                    Text(Common.Texts.kPrice)
                                         .foregroundColor(Common.Colors.kContentColor)
                                         .font(.subheadline.weight(.medium))
                                 }
                                 Spacer()
-                                Text("Change")
+                                Text(Common.Texts.kChangeText)
                                     .foregroundColor(.blue)
                                     .font(.subheadline.weight(.heavy))
                                     .underline()
@@ -54,9 +54,9 @@ struct ContentView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                         VStack(spacing: 10) {
                             Button {
-
+                                // TODO: When the proceed button is clicked.
                             } label: {
-                                Text("Proceed to Payment")
+                                Text(Common.Texts.kProceedText)
                                     .foregroundColor(.white)
                                     .font(.title3.weight(.semibold))
                             }
@@ -66,9 +66,9 @@ struct ContentView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 15))
                             .shadow(radius: 10)
                             Button(role: .cancel) {
-
+                                // TODO: When the cancel button is clicked.
                             } label: {
-                                Text("Cancel Order")
+                                Text(Common.Texts.kCancelText)
                                     .foregroundColor(Common.Colors.kContentColor)
                                     .font(.title3.weight(.semibold))
                             }
