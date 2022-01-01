@@ -24,8 +24,34 @@ struct ContentView: View {
                         Text("You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!")
                             .foregroundColor(Common.Colors.kContentColor)
                             .font(.subheadline.weight(.medium))
+                            .multilineTextAlignment(.center)
                             .fixedSize(horizontal: false, vertical: true)
                             .lineSpacing(10)
+                        ZStack {
+                            Common.Colors.kPlanBackgroundColor
+                            HStack(spacing: 15) {
+                                ZStack {
+                                    Image("MusicIcon")
+                                        .resizable()
+                                        .frame(width: 48, height: 48)
+                                }
+                                VStack(spacing: 10) {
+                                    Text("Annual Plan")
+                                        .foregroundColor(Common.Colors.kTitleColor)
+                                        .font(.subheadline.weight(.heavy))
+                                    Text("$59.99/year")
+                                        .foregroundColor(Common.Colors.kContentColor)
+                                        .font(.subheadline.weight(.medium))
+                                }
+                                Spacer()
+                                Text("Change")
+                                    .foregroundColor(.blue)
+                                    .font(.subheadline.weight(.heavy))
+                                    .underline()
+                            }
+                            .padding(20)
+                        }
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
                     }
                     .padding(30)
                 }
